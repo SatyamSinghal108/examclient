@@ -1,0 +1,13 @@
+.images{
+    background-image: url("../../../../assets/exam.png") ;
+    background-size:cover ;
+}
+
+.circle{
+    width: 10px;
+    height: 10px;
+    border: 0.8px solid black;
+    border-radius: 12px;
+    background-color: rgb(161, 253, 22);
+    margin: 5px 0 0 0 ;
+}

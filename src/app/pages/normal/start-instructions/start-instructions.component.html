@@ -1,0 +1,48 @@
+<div class="bootstrap-wrapper mt10 mr20 ml10">
+    <div class="row">
+        <div class="col-md-12">
+            <mat-card>
+                <mat-card-header>
+                    <mat-card-title>Read the instructions carefully !!</mat-card-title>
+                    <mat-card-subtitle>One more step to go - </mat-card-subtitle>
+                </mat-card-header>                
+                <mat-card-content class="ml20">
+                    <h1>{{quiz.title}}</h1>
+                    <p>{{quiz.description}}</p>
+                    <mat-divider></mat-divider>
+                    <br>
+                    <h1>Important Instructions</h1>
+                    <ul>
+                        <li>This quiz is only for practice purpose.</li>
+                        <li>You have to submit quiz within limits.</li>
+                        <li>The quiz of is <b>{{quiz.numberOfQuestions * 2}} minutes</b> . </li>
+                        <li>You can attempt the quiz any number of times.</li>
+                        <li>This quiz contains  <b>{{quiz.numberOfQuestions}} Questions</b>.</li>
+                        <li>Each question carries <b>{{quiz.maxMarks / quiz.numberOfQuestions}} marks</b> each. No negative marking for wrong ones.</li>
+                        <li>Each questions is a <b>MCQ</b> type.</li>
+                    </ul>
+                    <br>
+                    <mat-divider></mat-divider>
+                    <br>
+                    <h1>Attempting Quiz</h1>
+                    <ul>
+                        <li>Click <b>Start Quiz</b> button to start the exam.</li>
+                        <li>The time will start the moment you click the Start Quiz button</li>
+                        <li>Once Interrupted, due to any reason, quiz cannot be resumed.</li>
+                        <li>Scroll down to go to new question.</li>
+                        <li>Click the <b>Finish</b> button to finish and submit the quiz.</li>
+                        <li>Rsults will be auto-generate in form of PDF.</li>
+                    </ul>
+                </mat-card-content>
+                <br>
+                <mat-divider></mat-divider>
+                
+                <mat-card-actions class="text-center">
+                    
+                    <button mat-raised-button  color="primary" (click)="start()">Start</button>
+                    
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,81 @@
+<mat-card *ngIf="user">
+    <h1>Your Profile Details!!</h1>
+    <!-- {{user|json}} -->
+    <mat-card-content>
+        <div class="bootstrap-wrapper">
+            <div class="container">
+                <div class="container text-center">
+                    <img
+                    src="https://isobarscience.com/wp-content/uploads/2020/09/default-profile-picture1.jpg"
+                    alt="profile.jpg"
+                    class="profile-image"
+                    />
+                    <h1 class="mt20" style="font-weight: bold;">{{user.name}}</h1>
+                </div>
+                <div class="row">
+                    <div class="col-md-10 offset-md-1">
+
+                        <table class="table text-center">
+
+                            <tr >
+                                <td class="header">Username</td>
+                                <td class="value">{{user.username}}</td>
+                            </tr>
+
+                            
+                            <tr >
+                                <td class="header">User-Id</td>
+                                <td class="value">ExamP{{user.id}}</td>
+                            </tr>
+                            
+
+                            
+                            <tr >
+                                <td class="header">Phone No.</td>
+                                <td class="value">{{user.number}}</td>
+                            </tr>
+
+                            
+                            <tr >
+                                <td class="header">Role</td>
+                                <td class="value">{{user.authorities[0].authority}}</td>
+                            </tr>
+
+                            
+                            <tr >
+                                <td class="header">Status</td>
+                                <td class="value">{{user.enabled?"ACTIVE":"NOT ACTIVE"}}</td>
+                            </tr>
+                            
+                            <!-- <tr>
+                                <td>User-id</td>
+                                <td>Exam102</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>Phone no.</td>
+                                <td>9876543210</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>Role</td>
+                                <td>ADMIN</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>Status</td>
+                                <td>ACTIVE</td>
+                            </tr> -->
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
+
+    <mat-card-actions class="text-center" style="margin-bottom: 20px;">
+        <button mat-raised-button color="success">UPDATE</button>
+        <button mat-raised-button color="primary">SHARE</button>
+    </mat-card-actions>
+</mat-card>

@@ -1,0 +1,43 @@
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row" style="margin-top: 20px;">
+            <div class="col-md-6 offset-md-3" style="margin-top: 20px;">
+                <mat-card>
+                    <div class="container text-center">
+                        <img src="../../../assets/logo.png" alt="logo" style="height: 15vh; width: 15vh;" />
+                    </div>
+                    <h1 class="text-center" style="font-weight: 500; font-size: xx-large; margin-top: 10px;">Login here
+                        !!</h1>
+
+                    <!-- {{loginData | json}} -->
+                    <form (ngSubmit)="formSubmit()">
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label style="font-size: 20px;">User Name</mat-label>
+                            <input [(ngModel)]="loginData.username" name="username" required matInput type="text"
+                                placeholder="Enter username" style="font-size: 20px;">
+                            <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                            <!-- <mat-hint>Username should be unique!</mat-hint> -->
+                        </mat-form-field>
+
+                        <!--Password-->
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label style="font-size: 20px;">Password</mat-label>
+                            <input [(ngModel)]="loginData.password" name="password" required matInput type="password"
+                                placeholder="Enter password" style="font-size: 20px;">
+                            <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                            <!-- <mat-hint>Hint</mat-hint> -->
+                        </mat-form-field>
+                        <div class="container text-center" style="height: 100px;">
+                            <button mat-raised-button type="submit" color="primary"
+                                style="height: 40px; font-size: 20px; ">Login</button>
+                            <button mat-raised-button
+                                style="height: 40px; width:80px; margin-left: 20px; font-size: 20px;" color="accent"
+                                (click)="clear()">Clear</button>
+
+                        </div>
+                    </form>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>
